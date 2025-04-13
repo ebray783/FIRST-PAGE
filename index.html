@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.3" />
+  <title>FPVTOKEN</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0a0220, #120447);
+      background-attachment: fixed;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-buttons button {
+      background: transparent;
+      border: 2px solid #00f0ff;
+      color: #00f0ff;
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 0 5px;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #00f0ff;
+      color: #0a0220;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      font-size: 16px;
+      width: 220px;
+      border: 2px solid #00f0ff;
+      border-radius: 8px;
+      background: transparent;
+      color: #00f0ff;
+    }
+
+    #logo {
+      width: 500px;
+      height: auto;
+      animation: pulse 3s infinite;
+      margin-top: 30px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #00f0ff;
+      margin: 30px 0 20px 0;
+    }
+
+    .description {
+      font-size: 30px;
+      max-width: 600px;
+      margin: 0 auto 10px auto;
+    }
+
+    .button-group {
+      margin: 30px 0;
+    }
+
+    .button-group button {
+      background: transparent;
+      border: 2px solid #00f0ff;
+      color: #00f0ff;
+      padding: 5px 15px;
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 0 5px;
+    }
+
+    .section-title {
+      font-size: 40px;
+      color: #00f0ff;
+      margin-top: 80px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 3px solid #00f0ff;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #22409A, 0 0 10px #22409A;
+    }
+
+    #mint-section {
+      margin-top: 1500px;
+    }
+
+    .mint-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .mint-item img {
+      width: 150px;
+      height: 150px;
+      border: 2px solid #00f0ff;
+      border-radius: 10px;
+    }
+
+    .mint-item button {
+      margin-top: 10px;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      background: transparent;
+      border: 2px solid #00f0ff;
+      color: #00f0ff;
+      cursor: pointer;
+    }
+
+    .mint-item {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION + SEARCH BAR -->
+  <div class="topbar">
+    <div class="nav-buttons">
+      <button onclick="scrollToSection('top')">Home</button>
+      <button onclick="scrollToSection('gallery')">Gallery</button>
+      <button onclick="scrollToSection('mint-section')">Mint</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+  </div>
+
+  <div id="top"></div>
+  <img id="logo" src="logo.jpg" alt="Logo" />
+
+  <h1>FPVTOKEN</h1>
+  <p class="description">
+    The first crypto token inspired by aliens Predator idea, <br />
+    Including real FPV drone parts & NFT collection
+  </p>
+
+  <div class="button-group">
+    <button>Buy</button>
+    <button>Sell</button>
+  </div>
+
+  <h2 class="section-title">About the Project</h2>
+  <p class="description">
+    FPVTOKEN is the first crypto project merging FPV drone parts & NFTs. Inspired by alien Predator themes, <br />
+    our mission is dimming at technology and FPV facing, into one dimining, ecosystem.
+  </p>
+
+  <h2 id="gallery" class="section-title">GALLERY</h2>
+  <div class="gallery">
+    <img src="img1.jpg" alt="">
+    <img src="img2.jpg" alt="">
+    <img src="img3.jpg" alt="">
+    <img src="img4.jpg" alt="">
+    <img src="img5.jpg" alt="">
+    <img src="img6.jpg" alt="">
+    <img src="img7.jpg" alt="">
+    <img src="img8.jpg" alt="">
+  </div>
+
+  
+    </div>
+  </section>
+
+  <div id="" style="margin: 100px 0;">
+    <h2 class="section-title">SMART CONTRACT</h2>
+    <p class="SMART CONTRACT"SMART CONTRACT</p>
+  </div>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
